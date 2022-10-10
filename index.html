@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link href="assets/css/bootstrap.css" rel="stylesheet">
+      <link href="assets/css/all.css" rel="stylesheet">
+      <link href="assets/css/styles.css" rel="stylesheet">
+      
+      <title>Blog Literário</title>
+   </head>
+      <body>
+         <header>
+            <!-- O nav serve para espassar o cabeçalho -->
+            <!-- navbar-expand-md serve para definir tamanho da tela e espassar horizontalmente o navegador -->
+            <nav class="navbar navbar-light br-light navbar-expand-md fixed-top">
+               <!-- Essa div serve para dar margem na direita e na esquerda -->
+               <div class="container"> 
+                     <!-- class usado para o logotipo -->
+                     <a class="navbar-brand" href="index.html"> O Blog do Clube Literatura</a>
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Botão de navegação">
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="menu">
+                        <!-- mr-auto serve para alinhar a esquerda -->
+                        <div class="navbar-nav mr-auto">
+                           <a class="nav-link nav-item" href="index.html">Início</a>
+                           <a class="nav-link nav-item" href="post.html">Post</a>
+                           <a class="nav-link nav-item" href="contato.html">Contato</a>
+                           <div class="dropdown">
+                                 <a class="nav-link nav-item dropdown-toggle" data-toggle="dropdown" href="livros.html">Livros</a>
+                                 <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="livros.html">Romance</a>
+                                    <a class="dropdown-item" href="livros.html">Fantasia</a>
+                                    <a class="dropdown-item" href="livros.html">Terror</a>
+                                 </div>
+                           </div>
+                        </div>
+                        <!-- nav serve para alinhar a direita -->
+                        
+                        <button class="btn btn-outline-primary btn-sucess" onclick="Toasty()">Bem-vindo</button>
+                        <div class="toast" id="EpicToast" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top:20px; right: 20px;">
+                           <div class="toast-header">
+                              <strong class="mr-auto">Blog Literário</strong>
+                              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                              </button>
+                           </div>
+                           <div class="toast-body">
+                              Seja bem-vindo e tenha uma boa leitura
+                           </div>
+                        </div>
+                     </div>
+               </div>  
+            </nav>
+            <div class="bgimage d-none d-md-block mb-4" style="margin-top: 69px;">
+               <h1 class="titulo"> Clube da Literatura </h1>
+            </div>
+         </header>
+         <main>
+            <div class="container">
+               <div class="jumbotron d-block d-md-none text-center mb-4" style="margin-top: 89px;"> 
+                  <h5>O blog foi construído com o intuito de apresentar opniões sobre livros</h5>
+                  <br>
+                  <h5>Veja abaixo os livros mais solicitados</h5>
+               </div>
+
+               <h4 id="livros" class="mb-3">Livros Mais Lidos</h4>
+              
+               <div class="row">
+                  <div class="col-lg-4 col-md-6">
+                     <div class="card mb-3">
+                        <img class="imagem" src="assets/images/pedra_filosofal.jpg" alt="Harry Potter">
+                        <div class="card-body">
+                           <div class="text-center">
+                              <h5 class="card-title">Harry Potter e a Pedra Filosofal</h5>
+                              <p class="text-warning font-weight-bold">Fantasia</p>   
+                           </div>
+                           <p class="card-text text-justify">Harry Potter é um garoto órfão que vive infeliz com seus tios, os Dursleys. Ele recebe uma carta contendo um convite para ingressar em Hogwarts, uma famosa escola especializada em formar jovens bruxos. Harry adentra um mundo mágico que jamais imaginara.  </p>
+                        </div>
+                        <div class="card-footer text-right">
+                           <button class="btn btn-outline-primary"><a href="#livromodal" data-toggle="modal">Mais Informações</a></button>
+                        </div>
+                     </div>
+                  </div>
+               
+
+                  <div class="col-lg-4 col-md-6">
+                     <div class="card mb-3">
+                        <img src="assets/images/colecionador_ossos.jpg" alt="O Colecionador de Ossos">
+                        <div class="card-body">
+                           <div class="text-center">
+                              <h5 class="card-title">O Colecionador de Ossos</h5>
+                              <p class="text-warning font-weight-bold">Terror</p>   
+                           </div>
+                           <p class="card-text text-justify">A policial Amelia Donaghy está na perseguição de um assassino em série cujo cartão de visita é um pequeno pedaço de osso extraído de cada uma de suas vítimas. Incapaz de decifrar as pistas enigmáticas que o assassino deixa para trás na cena do crime.</p>
+                        </div>
+                        <div class="card-footer text-right">
+                           <button class="btn btn-outline-primary"><a href="#livromodal" data-toggle="modal">Mais Informações</a></button>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                     <div class="card mb-3">
+                        <img src="assets/images/principe_cruel.jpg" alt="O Príncipe Cruel">
+                        <div class="card-body">
+                           <div class="text-center">
+                              <h5 class="card-title">O Príncipe Cruel</h5>
+                              <p class="text-warning font-weight-bold">Fantasia</p>   
+                           </div>
+                           <p class="card-text text-justify">Jude tinha 7 anos quando seus pais foram assassinados e foi forçada a viver no Reino das Fadas. Dez anos depois, tudo o que ela quer é ser como eles – lindos e imortais – e realmente pertencer ao Reino das Fadas, apesar de sua mortalidade. Mas muitos do povo das Fadas desprezam os humanos.</p>
+                        </div>
+                        <div class="card-footer text-right">
+                           <button class="btn btn-outline-primary"><a href="#livromodal" data-toggle="modal">Mais Informações</a></button>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                     <div class="card mb-3">
+                        <img src="assets/images/rainha_vermelha.jpg" alt="A Rainha Vermelha">
+                        <div class="card-body">
+                           <div class="text-center">
+                              <h5 class="card-title">A Rainha Vermelha</h5>
+                              <p class="text-warning font-weight-bold">Fantasia</p>   
+                           </div>
+                           <p class="card-text text-justify">Mare e sua família são vermelhos: plebeus, humildes, destinados a servir uma elite prateada cujos poderes sobrenaturais os tornam quase deuses. Mare rouba o que pode para ajudar sua família a sobreviver e não tem esperanças de escapar do vilarejo miserável onde mora.</p>
+                        </div>
+                        <div class="card-footer text-right">
+                           <button class="btn btn-outline-primary"><a href="#livromodal" data-toggle="modal">Mais Informações</a></button>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                     <div class="card mb-3">
+                        <img src="assets/images/ainda_sou_eu.jpg" alt="Ainda sou eu ">
+                        <div class="card-body">
+                           <div class="text-center">
+                              <h5 class="card-title">Ainda sou eu</h5>
+                              <p class="text-warning font-weight-bold">Romance</p>   
+                           </div>
+                           <p class="card-text text-justify">Lou Clark chega em Nova York pronta para recomeçar a vida, confiante de que pode abraçar novas aventuras e manter seu relacionamento a distância. Ela é jogada no mundo dos super-ricos Gopnik - Leonard e a esposa bem mais nova, e um sem-fim de empregados e puxa-sacos.</p>
+                        </div>
+                        <div class="card-footer text-right">
+                           <button class="btn btn-outline-primary"><a href="#livromodal" data-toggle="modal">Mais Informações</a></button>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                     <div class="card mb-3">
+                        <img src="assets/images/guerra_tronos.jpg" alt="A Guerra dos Tronos">
+                        <div class="card-body">
+                           <div class="text-center">
+                              <h5 class="card-title">A Guerra dos Tronos</h5>
+                              <p class="text-warning font-weight-bold">Fantasia</p>   
+                           </div>
+                           <p class="card-text text-justify">Nas florestas ao norte de Winterfell, forças sobrenaturais se espalham por trás da Muralha que protege a região. E, nas Cidades Livres, o jovem Rei Dragão exilado na Rebelião de Robert planeja sua vingança e deseja recuperar sua herança de família: o Trono de Ferro de Westeros.</p>
+                        </div>
+                        <div class="card-footer text-right">
+                           <button class="btn btn-outline-primary"><a href="#livromodal" data-toggle="modal">Mais Informações</a></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <h1 id="procurados" class="mb-5 mt-5" >Gêneros Mais Procurados</h1>
+
+               <h3 id="procurados" class="mb-3 mt-3" >Terror</h3>
+               <div class="progress mb-4">
+                  <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+               </div>
+               <h3 id="procurados" class="mb-3 mt-3" >Romance</h3>
+               <div class="progress mb-4">
+                  <div class="progress-bar bg-info" role="progressbar" aria-label="Info example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+               </div>
+               <h3 id="procurados" class="mb-3 mt-3" >Fantasia</h3>
+               <div class="progress mb-4">
+                  <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+               </div>
+            </div> 
+            <div class="modal fade" id="livromodal">
+               <div class="modal-dialog modal-lg">
+                  <div class="modal-header">
+                     <span class="modal-title">Blog do Clube da Literatura</span>
+                     <button class="close" type="botton" data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <div class="modal-body">
+                     <span class="modal-text">Tudo depende do tipo de lente que você utiliza para ver as coisas.</span>
+                     <div class="carregando mt-4 mb-3">
+                        <button class="btn btn-primary text-right" type="button" disabled>
+                           <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                           Loading...
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </main>
+         <footer>
+            <div class="footer">
+               <div class="container">
+                   <div class="row">
+                       <div class="col-xl-4 col-lg-3 col-sm-7">
+                           <h5>Início</h5>
+                           <ul class="list-unstyled">
+                               <li><a href="index.html">Mais lidos</a></li>
+                               <li><a href="index.html">Gêneros mais procurados</a></li>
+                           </ul>
+                       </div>
+
+                       <div class="col-xl-3 col-lg-3 col-sm-5">
+                           <h5>Post</h5>
+                           <ul class="list-unstyled">
+                               <li><a href="post.html">Formulário</a></li>
+                           </ul>
+                       </div>
+
+
+                       <div class="col-xl-3 col-lg-3 col-sm-7">
+                           <h5>Livros</h5>
+                           <ul class="list-unstyled">
+                               <li><a href="livros.html">Cards</a></li>
+                           </ul>
+                       </div>
+                       
+                       <div class="col-xl-2 col-lg-3 col-sm-5">
+                           <h5>Contato</h5>
+                           <ul class="list-unstyled">
+                               <li><a href="contato.html">Sobre</a></li>
+                               <li><a href="contato.html">Depoimentos</a></li>
+                               <li><i class="fas fa-envelope-square"></i><a href="https://www.google.com/intl/pt-BR/gmail/about/"> blog@gmail.com</a></li>
+                               <li><i class="fas fa-user"></i> Maria</li>
+                               <li><i class="fas fa-phone"></i> (99)99999-3581</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+            <script src="assets/js/jquery-3.3.1.js"></script>
+            <script src="assets/js/popper.js"></script>
+            <script src="assets/js/bootstrap.js"></script>
+            <script src="assets/js/script.js"></script>
+              
+          </footer>
+      </body>
+
+</html>

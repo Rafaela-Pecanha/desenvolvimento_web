@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link href="assets/css/bootstrap.css" rel="stylesheet">
+      <link href="assets/css/all.css" rel="stylesheet">
+      <link href="assets/css/styles.css" rel="stylesheet">
+      
+      <title>Blog Literário</title>
+   </head>
+      <body>
+         <header class="mb-5">
+            <!-- O nav serve para espassar o cabeçalho -->
+            <!-- navbar-expand-md serve para definir tamanho da tela e espassar horizontalmente o navegador -->
+            <nav class="navbar navbar-light br-light navbar-expand-md fixed-top">
+               <!-- Essa div serve para dar margem na direita e na esquerda -->
+               <div class="container"> 
+                     <!-- class usado para o logotipo -->
+                     <a class="navbar-brand" href="index.html"> O Blog do Clube Literatura</a>
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Botão de navegação">
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="menu">
+                        <!-- mr-auto serve para alinhar a esquerda -->
+                        <div class="navbar-nav mr-auto">
+                           <a class="nav-link nav-item" href="index.html">Início</a>
+                           <a class="nav-link nav-item" href="post.html">Post</a>
+                           <a class="nav-link nav-item" href="contato.html">Contato</a>
+                           <div class="dropdown">
+                                 <a class="nav-link nav-item dropdown-toggle" data-toggle="dropdown" href="livros.html">Livros</a>
+                                 <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="livros.html">Romance</a>
+                                    <a class="dropdown-item" href="livros.html">Fantasia</a>
+                                    <a class="dropdown-item" href="livros.html">Terror</a>
+                                 </div>
+                           </div>
+                        </div>
+                        <!-- nav serve para alinhar a direita -->
+                        
+                        <button class="btn btn-outline-primary btn-sucess" onclick="Toasty()">Bem-vindo</button>
+                        <div class="toast" id="EpicToast" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top:20px; right: 20px;">
+                           <div class="toast-header">
+                              <strong class="mr-auto">Blog Literário</strong>
+                              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                              </button>
+                           </div>
+                           <div class="toast-body">
+                              Seja bem-vindo e tenha uma boa leitura
+                           </div>
+                        </div>
+                     </div>
+               </div>  
+            </nav>
+        </header>
+        <main class="mt-5">
+            <br>
+            <br>
+            <br>
+            <div class="container">
+                <form action="">
+                    <fieldset class="form-group">
+                        <legend class="font-weight-bold">Informações dos Livros</legend>
+                        <div class="form-group row">
+                            <label for="titulo" class="col-form-label col-lg-2">Título</label>
+                            <div class="col-lg-10">
+                                <input type="text" name="titulo" class="form-control is-valid" placeholder="Título" id="titulo">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                           <label for="autor" class="col-form-label col-lg-2">Autor</label>
+                           <div class="col-lg-10">
+                               <input type="text" name="autor" class="form-control is-valid" placeholder="Autor" id="autor">
+                           </div>
+                       </div>
+                       <div class="form-group row">
+                           <label class="col-form-label col-lg-2">Gênero</label>
+                           <div class="col-lg-10">
+                              <div class="form-check">
+                                 <input type="radio" id="genero-fantasia" name="fantasia" value="Fantasia" class="form-check-input">
+                                 <label for="genero-fantasia" class="form-check-label">Fantasia</label>
+                              </div>
+                              <div class="form-check">
+                                 <input type="radio" id="genero-terror" name="terror" value="Terror" class="form-check-input">
+                                 <label for="genero-terror" class="form-check-label">Terror</label>
+                              </div>
+                              <div class="form-check">
+                                 <input type="radio" id="genero-romance" name="roamance" value="Romance" class="form-check-input">
+                                 <label for="genero-romance" class="form-check-label">Romance</label>
+                              </div>
+                           </div>
+                       </div>
+                       <div class="form-group row">
+                           <label for="resumno" class="col-form-label col-lg-2">Resumo</label>
+                           <div class="col-lg-10">
+                              <input type="text" id="resumo" name="resumo" class="form-control is-invalid" placeholder="Resumo">
+                              <div class="invalid-feedback">Este campo deve ser preenchido</div>
+                           </div>
+                        </div>
+                     </fieldset>
+                     <div class="form-group row">
+                        <div class="col-lg-10 ofsset-lg-2">
+                           <button type="button" class="'btn btn-primary">Enviar</button>
+                        </div>
+                     </div>
+                </form>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xl-4 col-lg-3 col-sm-7">
+                           <h5>Início</h5>
+                           <ul class="list-unstyled">
+                              <li><a href="index.html">Mais lidos</a></li>
+                              <li><a href="index.html">Gêneros mais procurados</a></li>
+                           </ul>
+                     </div>
+
+                     <div class="col-xl-3 col-lg-3 col-sm-5">
+                           <h5>Post</h5>
+                           <ul class="list-unstyled">
+                              <li><a href="post.html">Formulário</a></li>
+                           </ul>
+                     </div>
+
+
+                     <div class="col-xl-3 col-lg-3 col-sm-7">
+                           <h5>Livros</h5>
+                           <ul class="list-unstyled">
+                              <li><a href="livros.html">Cards</a></li>
+                           </ul>
+                     </div>
+                     
+                     <div class="col-xl-2 col-lg-3 col-sm-5">
+                           <h5>Contato</h5>
+                           <ul class="list-unstyled">
+                              <li><a href="contato.html">Sobre</a></li>
+                              <li><a href="contato.html">Depoimentos</a></li>
+                              <li><i class="fas fa-envelope-square"></i><a href="https://www.google.com/intl/pt-BR/gmail/about/"> blog@gmail.com</a></li>
+                              <li><i class="fas fa-user"></i> Maria</li>
+                              <li><i class="fas fa-phone"></i> (99)99999-3581</li>
+                           </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <script src="assets/js/jquery-3.3.1.js"></script>
+            <script src="assets/js/popper.js"></script>
+            <script src="assets/js/bootstrap.js"></script>
+            <script src="assets/js/script.js"></script>
+              
+          </footer>
+      </body>
+
+</html>
